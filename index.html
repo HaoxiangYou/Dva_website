@@ -104,7 +104,6 @@
           We evaluate our method on standard visual control benchmarks using modern GPU-accelerated simulation. 
           Experiments show that our approach significantly reduces wall-clock training time and consistently outperforms all baseline methods in terms of final returns.
           Notably, on complex tasks such as humanoid locomotion, our method achieves a 4<span>&#215;</span>  improvement in final return, and successfully learns a humanoid running policy within 4 hours on a single GPU.
-          Videos and code are available on 
         </div>
       </div>
     </div>
@@ -119,12 +118,12 @@
         <h2 class="title is-3">Decoupled Policy Gradient</h2>
         <div class="content has-text-justified">
           <p>
-            we propose Decoupled Visual-Based Analytical Policy Gradient (D.Va), a novel method
-for learning visual policies using differentiable simulation. The core idea is to decouple visual
-observations from the computation graph, eliminating the need to differentiate through the rendering
-process. We find that this decoupling not only improves memory and computational efficiency by
-avoiding Jacobian computations over pixel space, but also normalizes the policy gradient, making
-visual policy learning more stable. 
+            We propose Decoupled Visual-Based Analytical Policy Gradient (D.Va), a novel method
+            for learning visual policies using differentiable simulation. The core idea is to decouple visual
+            observations from the computation graph, eliminating the need to differentiate through the rendering
+            process. We find that this decoupling not only improves memory and computational efficiency by
+            avoiding Jacobian computations over pixel space, but also normalizes the policy gradient, making
+            visual policy learning more stable. 
           </p>
         </div>
         <div class="content has-text-justified">
