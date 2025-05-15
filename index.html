@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
+        content="Accelerating Visual-Policy Learning through Parallel Differentiable Simulation">
   <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nerfies: Deformable Neural Radiance Fields</title>
+  <title>Accelerating Visual-Policy Learning through Parallel Differentiable Simulation</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -42,47 +42,6 @@
 </head>
 <body>
 
-<nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-  <div class="navbar-menu">
-    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://keunhong.com">
-      <span class="icon">
-          <i class="fas fa-home"></i>
-      </span>
-      </a>
-
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More Research
-        </a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://hypernerf.github.io">
-            HyperNeRF
-          </a>
-          <a class="navbar-item" href="https://nerfies.github.io">
-            Nerfies
-          </a>
-          <a class="navbar-item" href="https://latentfusion.github.io">
-            LatentFusion
-          </a>
-          <a class="navbar-item" href="https://photoshape.github.io">
-            PhotoShape
-          </a>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</nav>
-
-
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
@@ -95,7 +54,7 @@
             <span class="author-block">
               <a href="https://yilangliu.github.io/">Yilang Liu</a>,</span>
             <span class="author-block">
-              <a href="https://ialab.yale.edu/">Ian Abraham</a>,
+              <a href="https://ialab.yale.edu/">Ian Abraham</a>
             </span>
           </div>
 
@@ -153,108 +112,88 @@
   </div>
 </section>
 
-
 <section class="section">
   <div class="container is-max-desktop">
-
     <div class="columns is-centered">
-
-      <!-- Visual Effects. -->
-      <div class="column">
-        <div class="content">
-          <h2 class="title is-3">Visual Effects</h2>
+      <div class="column is-full-width">
+        <h2 class="title is-3">Decoupled Policy Gradient</h2>
+        <div class="content has-text-justified">
           <p>
-            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
-            would be impossible without nerfies since it would require going through a wall.
+            we propose Decoupled Visual-Based Analytical Policy Gradient (D.Va), a novel method
+for learning visual policies using differentiable simulation. The core idea is to decouple visual
+observations from the computation graph, eliminating the need to differentiate through the rendering
+process. We find that this decoupling not only improves memory and computational efficiency by
+avoiding Jacobian computations over pixel space, but also normalizes the policy gradient, making
+visual policy learning more stable. 
           </p>
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/dollyzoom-stacked.mp4"
-                    type="video/mp4">
-          </video>
         </div>
-      </div>
-      <!--/ Visual Effects. -->
-
-      <!-- Matting. -->
-      <div class="column">
-        <h2 class="title is-3">Matting</h2>
-        <div class="columns is-centered">
-          <div class="column content">
-            <p>
-              As a byproduct of our method, we can also solve the matting problem by ignoring
-              samples that fall outside of a bounding box during rendering.
-            </p>
-            <video id="matting-video" controls playsinline height="100%">
-              <source src="./static/videos/matting.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-
+        <div class="content has-text-justified">
+          <img src="./static/images/computation_graph.jpg"
+               class="decoupled-image"
+               alt="Decoupled Policy Gradient"/>
         </div>
       </div>
     </div>
-    <!--/ Matting. -->
+  </div>
 
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
     <!-- Animation. -->
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Animation</h2>
-
-        <!-- Interpolating. -->
-        <h3 class="title is-4">Interpolating states</h3>
-        <div class="content has-text-justified">
-          <p>
-            We can also animate the scene by interpolating the deformation latent codes of two input
-            frames. Use the slider here to linearly interpolate between the left frame and the right
-            frame.
-          </p>
-        </div>
-        <div class="columns is-vcentered interpolation-panel">
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_start.jpg"
-                 class="interpolation-image"
-                 alt="Interpolate start reference image."/>
-            <p>Start Frame</p>
-          </div>
-          <div class="column interpolation-video-column">
-            <div id="interpolation-image-wrapper">
-              Loading...
-            </div>
-            <input class="slider is-fullwidth is-large is-info"
-                   id="interpolation-slider"
-                   step="1" min="0" max="100" value="0" type="range">
-          </div>
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_end.jpg"
-                 class="interpolation-image"
-                 alt="Interpolation end reference image."/>
-            <p class="is-bold">End Frame</p>
-          </div>
-        </div>
+        <h2 class="title is-3">Results</h2>
         <br/>
-        <!--/ Interpolating. -->
-
-        <!-- Re-rendering. -->
-        <h3 class="title is-4">Re-rendering the input video</h3>
+        <!-- comparision with RL -->
+        <h3 class="title is-4">Comparisions with RL methods</h3>
         <div class="content has-text-justified">
           <p>
-            Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
-            viewpoint such as a stabilized camera by playing back the training deformations.
+            Our method achieves substantial speedups and significantly higher
+            rewards across all tasks. 
           </p>
         </div>
+        <div class="column is-full-width">
+          <div class="content has-text-centered">
+            <img src="./static/images/vs_rl.jpg"
+                 class="decoupled-image"
+                 alt="Comparisions with RL methods"/>
+            </video>
+          </div>
+      </div>
+      <br/>
+      <!-- comparision with Dagger -->
+      <h3 class="title is-4">Comparisions with State-to-Viusal Distillation</h3>
+      <div class="content has-text-justified">
+        <p>
+          Our method matches distilled policy in final return and
+          computation time on three simple tasks, but significantly outperforms it on the more challenging Humanoid
+          locomotion task.
+        </p>
+      </div>
+      <div class="column is-full-width">
         <div class="content has-text-centered">
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="75%">
-            <source src="./static/videos/replay.mp4"
-                    type="video/mp4">
+          <img src="./static/images/vs_dagger.jpg"
+               class="decoupled-image"
+               alt="Comparisions with RL methods"/>
           </video>
         </div>
-        <!--/ Re-rendering. -->
-
+      </div>
+      <br/>
+      <!-- comparision with SHAC -->
+      <h3 class="title is-4">Compare to SHAC with differential rendering</h3>
+      <div class="content has-text-justified">
+        <p>
+          Our method matches SHAC on 2D tasks (Cartpole
+          and Hopper) and outperforms SHAC on more challenging 3D tasks (Ant and Humanoid).
+        </p>
+      </div>
+      <div class="column is-full-width">
+        <div class="content has-text-centered">
+          <img src="./static/images/diff_render.jpg"
+               class="decoupled-image"
+               alt="Comparisions with RL methods"/>
+          </video>
+        </div>
       </div>
     </div>
     <!--/ Animation. -->
