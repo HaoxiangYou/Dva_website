@@ -106,7 +106,6 @@
   </div>
 </section>
 
-
 <div class="columns is-centered">
   <div class="column is-full-width">
     <h2 class="title is-3">Agent View</h2>
@@ -202,6 +201,58 @@
       <div class="column is-full-width">
         <h2 class="title is-3">Results</h2>
         <br/>
+        <h2 class="title is-4">Evaluation - Humanoid</h2>
+          <div class="columns is-vcentered interpolation-panel">
+            <div class="column is-4 has-text-centered">
+              <video id="cheetah" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/humanoid_iter_400.mp4"
+                        type="video/mp4">
+              </video>
+              <p>Iteration 400 (10 minutes of Training)</p>
+            </div>
+            <div class="column is-4 has-text-centered">
+              <video id="hopper" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/humanoid_iter_18000.mp4"
+                        type="video/mp4">
+              </video>
+              <p class="is-bold">Iteration 18000 (7.5 hours of Training)</p>
+            </div>
+            <div class="column is-4 has-text-centered">
+              <video id="humanoid" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/humanoid_iter_36000.mp4"
+                        type="video/mp4">
+              </video>
+              <p class="is-bold">Iteration 36000 (15 hours of Training)</p>
+            </div>
+          </div>
+        <br/>
+
+        <h2 class="title is-4">Evaluation - Hopper</h2>
+          <div class="columns is-vcentered interpolation-panel">
+            <div class="column is-4 has-text-centered">
+              <video id="cheetah" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/hopper_iter_400.mp4"
+                        type="video/mp4">
+              </video>
+              <p>Iteration 400 (4 minutes of Training)</p>
+            </div>
+            <div class="column is-4 has-text-centered">
+              <video id="hopper" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/hopper_iter_8000.mp4"
+                        type="video/mp4">
+              </video>
+              <p class="is-bold">Iteration 8000 (1 hour of Training)</p>
+            </div>
+            <div class="column is-4 has-text-centered">
+              <video id="humanoid" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/hopper_iter_17600.mp4"
+                        type="video/mp4">
+              </video>
+              <p class="is-bold">Iteration 17600 (2.5 hours of Training)</p>
+            </div>
+          </div>
+        <br/>
+
         <!-- comparision with RL -->
         <h3 class="title is-4">Comparisions with RL methods</h3>
         <div class="content has-text-justified">
@@ -217,7 +268,7 @@
                  alt="Comparisions with RL methods"/>
             </video>
           </div>
-      </div>
+        </div>
       <br/>
       <!-- comparision with Dagger -->
       <h3 class="title is-4">Comparisions with State-to-Viusal Distillation</h3>
