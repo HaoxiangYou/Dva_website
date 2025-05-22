@@ -42,6 +42,40 @@
 </head>
 <body>
 
+<section class="hero teaser" style="display: flex; justify-content: center; align-items: center; min-height: 100vh;">
+  <video id="teaser" autoplay muted playsinline style="width: 100%; max-width: 100%; height: auto;">
+    <source src="./static/videos/render.mp4" type="video/mp4">
+  </video>
+</section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const teaser = document.getElementById("teaser");
+    let hasScrolled = false;
+
+    teaser.loop = false; // Allow "ended" event to fire
+
+    teaser.addEventListener("ended", function () {
+      if (!hasScrolled) {
+        hasScrolled = true;
+
+        // Scroll to the next section
+        const nextSection = document.querySelector('.hero:not(.teaser)');
+        if (nextSection) {
+          nextSection.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Reset to first frame
+        teaser.currentTime = 0;
+
+        // Play and enable looping for subsequent plays
+        teaser.loop = true;
+        teaser.play();
+      }
+    });
+  });
+</script>
+
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
@@ -80,7 +114,7 @@
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
-                  <span> Code (Comming Soon)</span>
+                  <span> Code </span>
                   </a>
               </span>
             </div>
@@ -91,17 +125,36 @@
   </div>
 </section>
 
-<section class="hero teaser">
+<section class="section">
   <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/render.mp4"
-                type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        Decoupled Visual-Based Analytical Policy Gradient (D.Va) is a visual policy learning method. On complex tasks such as humanoid locomotion, our learning alogirhtm
-        achieves substantial improvement in wall-clock time and 4<span>&#215;</span>  improvement in final return over the established RL algorithms. 
-      </h2>
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          In this work, we propose <strong>Decoupled Visual-based Analytical Policy Gradient (D.Va)</strong> — a computationally efficient algorithm for learning continuous control directly from raw pixel observations.
+          Our approach decouple the rendering process from the computation graph, enabling seamless integration with existing differentiable simulation ecosystems without the need for specialized differentiable rendering software.
+          This decoupling not only reduces computational and memory overhead but also effectively attenuates the policy gradient norm, leading to more stable and smoother optimization.  
+          We evaluate our method on standard visual control benchmarks using modern GPU-accelerated simulation. 
+          Experiments show that our approach significantly reduces wall-clock training time and consistently outperforms all baseline methods in terms of final returns.
+          Notably, on complex tasks such as humanoid locomotion, our method achieves a 4<span>&#215;</span>  improvement in final return, and successfully learns a humanoid running policy within 4 hours on a single GPU.
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <div class="content has-text-justified">
+          <img src="./static/images/computation_graph.jpg"
+               class="decoupled-image"
+               alt="Decoupled Policy Gradient"/>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -149,49 +202,6 @@
 </div>
 <!--/ Animation. -->
 
-<section class="section">
-  <div class="container is-max-desktop">
-    <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          In this work, we propose a computationally efficient algorithm for visual policy learning that leverages differentiable simulation and first-order analytical policy gradients.
-          Our approach decouple the rendering process from the computation graph, enabling seamless integration with existing differentiable simulation ecosystems without the need for specialized differentiable rendering software.
-          This decoupling not only reduces computational and memory overhead but also effectively attenuates the policy gradient norm, leading to more stable and smoother optimization.  
-          We evaluate our method on standard visual control benchmarks using modern GPU-accelerated simulation. 
-          Experiments show that our approach significantly reduces wall-clock training time and consistently outperforms all baseline methods in terms of final returns.
-          Notably, on complex tasks such as humanoid locomotion, our method achieves a 4<span>&#215;</span>  improvement in final return, and successfully learns a humanoid running policy within 4 hours on a single GPU.
-        </div>
-      </div>
-    </div>
-    <!--/ Abstract. -->
-  </div>
-</section>
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Decoupled Policy Gradient</h2>
-        <div class="content has-text-justified">
-          <p>
-            We propose Decoupled Visual-Based Analytical Policy Gradient (D.Va), a novel method
-            for learning visual policies using differentiable simulation. The core idea is to decouple visual
-            observations from the computation graph, eliminating the need to differentiate through the rendering
-            process. We find that this decoupling not only improves memory and computational efficiency by
-            avoiding Jacobian computations over pixel space, but also normalizes the policy gradient, making
-            visual policy learning more stable. 
-          </p>
-        </div>
-        <div class="content has-text-justified">
-          <img src="./static/images/computation_graph.jpg"
-               class="decoupled-image"
-               alt="Decoupled Policy Gradient"/>
-        </div>
-      </div>
-    </div>
-  </div>
 
 <section class="section">
   <div class="container is-max-desktop">
