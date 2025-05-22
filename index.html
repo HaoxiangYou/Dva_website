@@ -77,7 +77,7 @@
 
 <section class="hero">
   <div class="hero-body">
-    <div class="container is-max-desktop">
+    <div class="container is-two-thirds">
       <div class="columns is-centered">
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title">Accelerating Visual-Policy Learning through Parallel Differentiable Simulation</h1>
@@ -125,7 +125,7 @@
 </section>
 
 <section class="section">
-  <div class="container is-max-desktop">
+  <div class="container is-two-thirds">
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
@@ -140,129 +140,75 @@
         </div>
       </div>
     </div>
-    <!--/ Abstract. -->
-  </div>
-</section>
-
-<section class="section">
-  <div class="container is-max-desktop">
     <div class="columns is-centered">
-      <div class="column is-full-width">
         <div class="content has-text-justified">
           <img src="./static/images/computation_graph.jpg"
                class="decoupled-image"
                alt="Decoupled Policy Gradient"/>
         </div>
-      </div>
     </div>
+    <!--/ Abstract. -->
   </div>
 </section>
 
-<div class="columns is-centered">
-  <div class="column is-full-width">
-    <h2 class="title is-3">Agent View</h2>
+<section class="section pt-4 pb-4">
+  <div class="columns is-centered">
+  <div class="column is-two-thirds">
+  <div class="columns is-centered">
+  <div class="column is-two-thirds">
+    <h2 class="title is-3">📸 The policy operates solely on raw visual input!</h2>
     <div class="content has-text-justified">
       <p>
-        We show camera views of each environment in Blender
+      Below is the camera view observed by the neural agent.
       </p>
     </div>
-    <div class="columns is-vcentered interpolation-panel">
-      <div class="column is-3 has-text-centered">
-        <video id="cheetah" autoplay controls muted loop playsinline height="100%">
-          <source src="./static/videos/cheetah_agent_view.mp4"
-                  type="video/mp4">
-        </video>
-        <p>Half Cheetah</p>
+    <div class="columns">
+      <!-- Left Column -->
+      <div class="column has-text-centered">
+        <div class="mb-5">
+          <video id="hopper" autoplay controls muted loop playsinline style="width: 100%;">
+            <source src="./static/videos/hopper_agent_view.mp4" type="video/mp4">
+          </video>
+          <p><strong>Hopper</strong></p>
+          <video id="cheetah" autoplay controls muted loop playsinline style="width: 100%;">
+            <source src="./static/videos/cheetah_agent_view.mp4" type="video/mp4">
+          </video>
+          <p><strong>Half Cheetah</strong></p>
+        </div>
       </div>
-      <div class="column is-3 has-text-centered">
-        <video id="hopper" autoplay controls muted loop playsinline height="100%">
-          <source src="./static/videos/hopper_agent_view.mp4"
-                  type="video/mp4">
-        </video>
-        <p class="is-bold">Hopper</p>
-      </div>
-      <div class="column is-3 has-text-centered">
-        <video id="humanoid" autoplay controls muted loop playsinline height="100%">
-          <source src="./static/videos/humanoid_agent_view.mp4"
-                  type="video/mp4">
-        </video>
-        <p class="is-bold">Humanoid</p>
-      </div>
-      <div class="column is-3 has-text-centered">
-        <video id="ant" autoplay controls muted loop playsinline height="100%">
-          <source src="./static/videos/ant_agent_view.mp4"
-                  type="video/mp4">
-        </video>
-        <p class="is-bold">Ant</p>
+      <!-- Right Column -->
+      <div class="column has-text-centered">
+        <div class="mb-5">
+          <video id="ant" autoplay controls muted loop playsinline style="width: 100%;">
+            <source src="./static/videos/ant_agent_view.mp4" type="video/mp4">
+          </video>
+          <p><strong>Ant</strong></p>
+          <video id="humanoid" autoplay controls muted loop playsinline style="width: 100%;">
+            <source src="./static/videos/humanoid_agent_view.mp4" type="video/mp4">
+          </video>
+          <p><strong>Humanoid</strong></p>
+        </div>
       </div>
     </div>
-    <br/>
   </div>
-</div>
-<!--/ Animation. -->
+  </div>
+  </div>
+  </div>
+</section>
 
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-    <!-- Animation. -->
-    <div class="columns is-centered">
+<section class="section pt-4 pb-4">
+  <div class="columns is-centered">
+  <div class="column is-two-thirds">
+  <div class="columns is-centered">
+  <div class="column is-two-thirds">
       <div class="column is-full-width">
-        <h2 class="title is-3">Results</h2>
-        <br/>
-        <h2 class="title is-4">Evaluation - Humanoid</h2>
-          <div class="columns is-vcentered interpolation-panel">
-            <div class="column is-4 has-text-centered">
-              <video id="cheetah" autoplay controls muted loop playsinline height="100%">
-                <source src="./static/videos/humanoid_iter_0.mp4"
-                        type="video/mp4">
-              </video>
-              <p>Iteration 0</p>
-            </div>
-            <div class="column is-4 has-text-centered">
-              <video id="humanoid" autoplay controls muted loop playsinline height="100%">
-                <source src="./static/videos/humanoid_iter_9600_4_hours.mp4"
-                        type="video/mp4">
-              </video>
-              <p class="is-bold">Iteration 9600 (4 hours of Training)</p>
-            </div>
-            <div class="column is-4 has-text-centered">
-              <video id="humanoid" autoplay controls muted loop playsinline height="100%">
-                <source src="./static/videos/humanoid_iter_36000_15_hours.mp4"
-                        type="video/mp4">
-              </video>
-              <p class="is-bold">Iteration 36000 (15 hours of Training)</p>
-            </div>
-          </div>
-        <br/>
+        <h2 class="title is-3">🚀 Accelerated Training Progress!</h2>
+        <p>
+        Leveraging differentiable simulation, our method learns to control from raw pixels in just tens of minutes for the majority of tasks!
+        </p>
+        </br>
 
-        <h2 class="title is-4">Evaluation - Ant</h2>
-          <div class="columns is-vcentered interpolation-panel">
-            <div class="column is-4 has-text-centered">
-              <video id="cheetah" autoplay controls muted loop playsinline height="100%">
-                <source src="./static/videos/ant_iter_0.mp4"
-                        type="video/mp4">
-              </video>
-              <p>Iteration 0</p>
-            </div>
-            <div class="column is-4 has-text-centered">
-              <video id="humanoid" autoplay controls muted loop playsinline height="100%">
-                <source src="./static/videos/ant_iter_2000_20_minutes.mp4"
-                        type="video/mp4">
-              </video>
-              <p class="is-bold">Iteration 2000 (20 minutes of Training)</p>
-            </div>
-            <div class="column is-4 has-text-centered">
-              <video id="humanoid" autoplay controls muted loop playsinline height="100%">
-                <source src="./static/videos/ant_iter_16000_2-6_hours.mp4"
-                        type="video/mp4">
-              </video>
-              <p class="is-bold">Iteration 16000 (6 hours of Training)</p>
-            </div>
-          </div>
-        <br/>
-
-        <h2 class="title is-4">Evaluation - Hopper</h2>
+        <h2 class="title is-4">Hopper</h2>
           <div class="columns is-vcentered interpolation-panel">
             <div class="column is-4 has-text-centered">
               <video id="cheetah" autoplay controls muted loop playsinline height="100%">
@@ -273,10 +219,10 @@
             </div>
             <div class="column is-4 has-text-centered">
               <video id="hopper" autoplay controls muted loop playsinline height="100%">
-                <source src="./static/videos/hopper_iter_8000_1_hour.mp4"
+                <source src="./static/videos/hopper_iter_400_4_minutes.mp4"
                         type="video/mp4">
               </video>
-              <p class="is-bold">Iteration 8000 (1 hour of Training)</p>
+              <p class="is-bold">Iteration 400 (4 minites of Training)</p>
             </div>
             <div class="column is-4 has-text-centered">
               <video id="humanoid" autoplay controls muted loop playsinline height="100%">
@@ -287,8 +233,8 @@
             </div>
           </div>
         <br/>
-        
-        <h2 class="title is-4">Evaluation - cheetah</h2>
+
+        <h2 class="title is-4">Cheetah</h2>
           <div class="columns is-vcentered interpolation-panel">
             <div class="column is-4 has-text-centered">
               <video id="cheetah" autoplay controls muted loop playsinline height="100%">
@@ -314,62 +260,111 @@
           </div>
         <br/>
 
-        <!-- comparision with RL -->
-        <h3 class="title is-4">Comparisions with RL methods</h3>
+        <h2 class="title is-4">Ant</h2>
+          <div class="columns is-vcentered interpolation-panel">
+            <div class="column is-4 has-text-centered">
+              <video id="cheetah" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/ant_iter_0.mp4"
+                        type="video/mp4">
+              </video>
+              <p>Iteration 0</p>
+            </div>
+            <div class="column is-4 has-text-centered">
+              <video id="humanoid" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/ant_iter_2000_20_minutes.mp4"
+                        type="video/mp4">
+              </video>
+              <p class="is-bold">Iteration 2000 (20 minutes of Training)</p>
+            </div>
+            <div class="column is-4 has-text-centered">
+              <video id="humanoid" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/ant_iter_16000_2-6_hours.mp4"
+                        type="video/mp4">
+              </video>
+              <p class="is-bold">Iteration 16000 (6 hours of Training)</p>
+            </div>
+          </div>
+        <br/>
+
+        <h2 class="title is-4">Humanoid</h2>
+          <div class="columns is-vcentered interpolation-panel">
+            <div class="column is-4 has-text-centered">
+              <video id="cheetah" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/humanoid_iter_0.mp4"
+                        type="video/mp4">
+              </video>
+              <p>Iteration 0</p>
+            </div>
+            <div class="column is-4 has-text-centered">
+              <video id="humanoid" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/humanoid_iter_9600_4_hours.mp4"
+                        type="video/mp4">
+              </video>
+              <p class="is-bold">Iteration 9600 (4 hours of Training)</p>
+            </div>
+            <div class="column is-4 has-text-centered">
+              <video id="humanoid" autoplay controls muted loop playsinline height="100%">
+                <source src="./static/videos/humanoid_iter_36000_15_hours.mp4"
+                        type="video/mp4">
+              </video>
+              <p class="is-bold">Iteration 36000 (15 hours of Training)</p>
+            </div>
+          </div>
+        <br/>
+  </div>
+</section>
+
+<section class="section pt-4 pb-4">
+  <div class="columns is-centered">
+  <div class="column is-two-thirds">
+  <div class="columns is-centered">
+  <div class="column is-two-thirds">
+    <h2 class="title is-3">🏆 High Reward Achieved!</h2>
+    <div class="content has-text-justified">
+      <p>
+     Our method not only improves wall-clock training time, but also consistently achieves higher final rewards — especially in complex tasks such as humanoid locomotion.
+      </p>
+    </div>
+        <h3 class="title is-5">Comparison to RL Methods</h3>
         <div class="content has-text-justified">
-          <p>
-            Our method achieves substantial speedups and significantly higher
-            rewards across all tasks. 
-          </p>
         </div>
         <div class="column is-full-width">
           <div class="content has-text-centered">
             <img src="./static/images/vs_rl.jpg"
-                 class="decoupled-image"
-                 alt="Comparisions with RL methods"/>
+                 class="decoupled-image"/>
             </video>
           </div>
         </div>
       <br/>
       <!-- comparision with Dagger -->
-      <h3 class="title is-4">Comparisions with State-to-Viusal Distillation</h3>
+      <h3 class="title is-5">Comparison to State-to-Viusal Distillation</h3>
       <div class="content has-text-justified">
-        <p>
-          Our method matches distilled policy in final return and
-          computation time on three simple tasks, but significantly outperforms it on the more challenging Humanoid
-          locomotion task.
-        </p>
       </div>
       <div class="column is-full-width">
         <div class="content has-text-centered">
           <img src="./static/images/vs_dagger.jpg"
-               class="decoupled-image"
-               alt="Comparisions with RL methods"/>
+               class="decoupled-image"/>
           </video>
         </div>
       </div>
       <br/>
       <!-- comparision with SHAC -->
-      <h3 class="title is-4">Compare to SHAC with differential rendering</h3>
+      <h3 class="title is-5">Comparison to SHAC with Differentiable Rendering</h3>
       <div class="content has-text-justified">
-        <p>
-          Our method matches SHAC on 2D tasks (Cartpole
-          and Hopper) and outperforms SHAC on more challenging 3D tasks (Ant and Humanoid).
-        </p>
       </div>
       <div class="column is-full-width">
         <div class="content has-text-centered">
           <img src="./static/images/diff_render.jpg"
-               class="decoupled-image"
-               alt="Comparisions with RL methods"/>
+               class="decoupled-image"/>
           </video>
         </div>
       </div>
     </div>
-    <!--/ Animation. -->
+  </div>
+  </div>
+  </div>
   </div>
 </section>
-
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
@@ -389,22 +384,17 @@
 
 <footer class="footer">
   <div class="container">
-    <div class="content has-text-centered">
-      <a class="icon-link"
-         href="./static/videos/nerfies_paper.pdf">
-        <i class="fas fa-file-pdf"></i>
-      </a>
-      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
-        <i class="fab fa-github"></i>
-      </a>
-    </div>
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content">
           <p>
-            This website is licensed under a <a rel="license"
-                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
+            This site is adapted from the
+              <a href="https://nerfies.github.io/">Nerfies project</a> and is
+              distributed under the
+              <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/">
+                Creative&nbsp;Commons&nbsp;Attribution-ShareAlike&nbsp;4.0&nbsp;International&nbsp;License
+              </a>.
           </p>
           <p>
             This means you are free to borrow the <a
