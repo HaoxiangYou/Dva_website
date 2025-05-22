@@ -60,11 +60,10 @@
         hasScrolled = true;
 
         // Scroll to the next section
-        const nextSection = document.querySelector('.hero:not(.teaser)');
-        if (nextSection) {
-          nextSection.scrollIntoView({ behavior: 'smooth' });
-        }
-
+        window.scrollTo({
+          top: 0.7 * window.innerHeight,
+          behavior: 'smooth'
+        });
         // Reset to first frame
         teaser.currentTime = 0;
 
